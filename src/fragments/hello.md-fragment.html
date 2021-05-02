@@ -1,0 +1,72 @@
+<h1 id="hello-cruel-world">Hello cruel world <a class="header-anchor" href="#hello-cruel-world">¶</a></h1>
+<p><div class="table-of-contents"><ul><li><a href="#hello-cruel-world">Hello cruel world </a><ul><li><a href="#tables">Tables </a></li><li><a href="#prism">Prism </a></li><li><a href="#figures-instead-of-plain-images">Figures instead of plain images </a></li><li><a href="#abbreviations">Abbreviations </a></li><li><a href="#styles-and-lists">Styles and Lists </a></li><li><a href="#tasks-lists">Tasks lists </a></li></ul></li></ul></div></p>
+<dl>
+<dt>Term 1</dt>
+<dd>Definition 1</dd>
+<dt>Term 2 with <em>inline markup</em></dt>
+<dd>Definition 2</dd>
+</dl>
+<p>Third paragraph of definition 2.</p>
+<p>This is an experiement to see if things work out the way they are supposed to and how well we can replace gulp with you<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<h2 id="tables">Tables <a class="header-anchor" href="#tables">¶</a></h2>
+<p>Markdown-it claims it supports tables out of the box. Let's see</p>
+<div class="admonition warning">
+<p class="admonition-title">This might not work</p>
+<p><strong>This doesn't work with the commonmark preset</strong></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">what table formatting works for markdown-it</p>
+<p>I have no clue but it should be interesting to research further</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Heading 1</th>
+<th>Heading 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cell 1</td>
+<td>Cell 2</td>
+</tr>
+<tr>
+<td>Cell 3</td>
+<td>Cell 4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prism">Prism <a class="header-anchor" href="#prism">¶</a></h2>
+<p>This won't work because we don't have the stylesheets and code attached to it but we can test that it doesn't error out</p>
+<pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hey'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="figures-instead-of-plain-images">Figures instead of plain images <a class="header-anchor" href="#figures-instead-of-plain-images">¶</a></h2>
+<figure><img src="https://res.cloudinary.com/dfh6ihzvj/images/v1619121250/publishing-project.rivendellweb.net/tag-release-github1/tag-release-github1.png" alt=""><figcaption>Example of a tagged Github release</figcaption></figure>
+<h2 id="abbreviations">Abbreviations <a class="header-anchor" href="#abbreviations">¶</a></h2>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification
+is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<h2 id="styles-and-lists">Styles and Lists <a class="header-anchor" href="#styles-and-lists">¶</a></h2>
+<p>Make sure the CSS works, as with anything else needing a stylesheet, it won't work, we're just generating a fragment</p>
+<ul class="c">
+<li>item
+<ul class="b">
+<li class="a">nested item</li>
+</ul>
+</li>
+</ul>
+<h2 id="tasks-lists">Tasks lists <a class="header-anchor" href="#tasks-lists">¶</a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> unchecked item 1</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> unchecked item 2</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> unchecked item 3</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> checked item 4</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Here is the footnote. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Here's another one <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
