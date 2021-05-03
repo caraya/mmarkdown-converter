@@ -37,6 +37,39 @@ This won't work because we don't have the stylesheets and code attached to it bu
 
 ```js
 console.log('hey');
+
+// READING A DIRECTORY AND SAVING EACH CONVERTED HTML FILE
+
+const fragmentSourceDir = 'src/fragments/';
+
+// read the directory
+fs.readdir(fragmentSourceDir, 'utf-8', (err, files) => {
+  // if there's an error, log it to console and bail
+  if (err) {
+    console.error(err);
+    process.exit(-1);
+  }
+
+  // For each file in the directory
+  files.forEach((file) => {
+    const fullPath = fragmentSourceDir + file;
+    const destination = `${file}-full.html`;
+    // Read it
+    fs.readFile(fullPath, 'utf8', (err, content) => {
+      // if there's an error, log it to console and bail
+      if (err) {
+        console.error(err);
+        process.exit(-1);
+      }
+
+      fs.writeFileSync(`dist/${destination}`, documentTop, 'utf-8');
+      fs.appendFileSync(`dist/${destination}`, content, 'utf-8');
+      fs.appendFileSync(`dist/${destination}`, documentBottom, 'utf-8');
+
+      console.log(`${destination} file created`)
+    })
+  })
+})
 ```
 
 ## Figures instead of plain images
@@ -66,6 +99,46 @@ Make sure the CSS works, as with anything else needing a stylesheet, it won't wo
 * [ ] unchecked item 2
 * [ ] unchecked item 3
 * [x] checked item 4
+
+## Another code block to test something
+
+
+```js
+console.log('hey');
+
+// READING A DIRECTORY AND SAVING EACH CONVERTED HTML FILE
+
+const fragmentSourceDir = 'src/fragments/';
+
+// read the directory
+fs.readdir(fragmentSourceDir, 'utf-8', (err, files) => {
+  // if there's an error, log it to console and bail
+  if (err) {
+    console.error(err);
+    process.exit(-1);
+  }
+
+  // For each file in the directory
+  files.forEach((file) => {
+    const fullPath = fragmentSourceDir + file;
+    const destination = `${file}-full.html`;
+    // Read it
+    fs.readFile(fullPath, 'utf8', (err, content) => {
+      // if there's an error, log it to console and bail
+      if (err) {
+        console.error(err);
+        process.exit(-1);
+      }
+
+      fs.writeFileSync(`dist/${destination}`, documentTop, 'utf-8');
+      fs.appendFileSync(`dist/${destination}`, content, 'utf-8');
+      fs.appendFileSync(`dist/${destination}`, documentBottom, 'utf-8');
+
+      console.log(`${destination} file created`)
+    })
+  })
+})
+```
 
 [^1]: Here is the footnote.
 

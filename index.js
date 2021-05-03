@@ -90,15 +90,15 @@ const documentTop = `<!DOCTYPE html>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<article class="container">
 `;
 
 // string literal for the footer of the regular HTML document
 const documentBottom = `
-
+</article> <!-- container -->
 <script src="js/prism.js"></script>
 <script src="js/fontfaceobserver.js"></script>
   <script>
