@@ -1,7 +1,6 @@
 /* eslint-disable require-jsdoc */
 // Builtin modules
 const fs = require('fs');
-// const path = require('path');
 
 const markdown = require('markdown-it');
 const markdownOptions = {
@@ -111,9 +110,6 @@ const md = markdown(markdownOptions)
 
 // READING A DIRECTORY AND SAVING EACH CONVERTED HTML FILE
 
-// The directory we wan to read is the third argument in
-// in the command line or the string './src/md/' if there
-// is no argument in the command line
 const dirToRead = process.argv[2] || './src/md/';
 
 // read the directory
@@ -208,16 +204,13 @@ fs.readdir(fragmentSourceDir, 'utf-8', (err, files) => {
       if (err) {
         console.error(err);
         process.exit(-1);
-      } else {
-        const fileOutput = documentTop + content + documentBottom;
-        fs.writeFile(`src/fragments/${destination}`, fileOutput, (err) => {});
-
-        // fs.writeFileSync(`dist/${destination}`, documentTop, 'utf-8');
-        // fs.appendFileSync(`dist/${destination}`, content, 'utf-8');
-        // fs.appendFileSync(`dist/${destination}`, documentBottom, 'utf-8');
-
-        // console.log(`${destination} file created`);
       }
+
+      fs.writeFileSync(`dist/${destination}`, documentTop, 'utf-8');
+      fs.appendFileSync(`dist/${destination}`, content, 'utf-8');
+      fs.appendFileSync(`dist/${destination}`, documentBottom, 'utf-8');
+
+      console.log(`${destination} file created`);
     });
   });
 });

@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<article class="container">
 <h2>Hello cruel world</h2>
 <p><kbd>toc</kbd></p>
 <dl>
@@ -144,3 +156,18 @@ belong to the previous footnote. <a href="#fnref4" class="footnote-backref">â†©ï
 </li>
 </ol>
 </section>
+
+</article> <!-- container -->
+<script src="js/prism.js"></script>
+<script src="js/fontfaceobserver.js"></script>
+  <script>
+    const font = new FontFaceObserver('Recursive');
+
+    font.load().then(function () {
+      console.log('Font is available');
+    }, function () {
+      console.log('Font is not available');
+    });
+  </script>
+  </body>
+</html>
